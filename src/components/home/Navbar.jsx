@@ -7,9 +7,20 @@ import { Link } from 'react-router-dom'
 export default function Navbar() {
   const [navbarState, setNavbarState] = useState(false);
   return (
-    <>
-    <p style={{height: 200, backgroundColor: 'gray'}}>its navbar</p>
-      {/* <Nav>
+    <div>
+      <p className="min-h-[300px] text-5xl bg-gray-600 w-full">its navbar</p>
+      <Link to={'/'}>
+        <p>Home</p>
+      </Link>
+      <Link to={'/services'}>
+        <p>route to services</p>
+      </Link>
+    </div>
+      
+  );
+}
+
+{/* <Nav>
         <div className="brand">
           <div className="container">
             <img src={logo} alt="" />
@@ -70,9 +81,6 @@ export default function Navbar() {
          
         </ul>
       </ResponsiveNav> */}
-    </>
-  );
-}
 
 const Nav = styled.nav`
   display: flex;
