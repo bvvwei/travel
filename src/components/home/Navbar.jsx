@@ -8,9 +8,9 @@ export default function Navbar() {
   const [navbarState, setNavbarState] = useState(false);
   return (
     <div>
-      <p className="min-h-[300px] text-5xl bg-gray-600 w-full">its navbar</p>
+      <p className="navbar">its navbar</p>
       <Link to={'/'}>
-        <p>Home</p>
+        <p className="navbar_text">Home</p>
       </Link>
       <Link to={'/services'}>
         <p>route to services</p>
@@ -34,7 +34,6 @@ export default function Navbar() {
             )}
           </div>
         </div>
-
         <ul>
           <li>
             <a href="#home">Home</a>
@@ -175,7 +174,6 @@ const ResponsiveNav = styled.div`
       width: 100%;
       margin: 1rem 0;
       margin-left: 2rem;
-
       a {
         text-decoration: none;
         color: #0077b6;
