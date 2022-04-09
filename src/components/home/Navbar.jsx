@@ -3,6 +3,7 @@ import styled from "styled-components";
 import logo from "../assets/logo.png";
 import { GiHamburgerMenu } from "react-icons/gi";
 import { VscChromeClose } from "react-icons/vsc";
+import { Link } from 'react-router-dom' 
 export default function Navbar() {
   const [navbarState, setNavbarState] = useState(false);
   return (
@@ -50,11 +51,11 @@ export default function Navbar() {
               About
             </a>
           </li>
-          <li>
-            <a href="/recommend" onClick={() => setNavbarState(false)}>
-              Places
-            </a>
-          </li>
+          <Link to={{pathname: 'recommend'}}>
+            <li>
+              <p>Places</p>
+            </li>
+          </Link>
           <li>
             <a href="/testimonials" onClick={() => setNavbarState(false)}>
               Testimonials

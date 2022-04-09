@@ -10,6 +10,7 @@ import info1 from "../assets/info1.png";
 import info2 from "../assets/info2.png";
 import info3 from "../assets/info3.png";
 
+
 export default function Recommend() {
   const data = [
     {

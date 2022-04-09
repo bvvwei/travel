@@ -8,7 +8,7 @@ import Services from "./components/home/Services";
 import Testimonials from "./components/home/Testimonials";
 import scrollreveal from "scrollreveal";
 import connect from "../src/components/login/connect";
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import Recommendpage from "./components/home/Recommendpage";
 import Home from "./components/home/Home";
 export default function App() {
@@ -35,27 +35,18 @@ export default function App() {
       }
     );
   }, []);
-  return (<>
-    
-    <div>
-      <Router>
-      <ScrollToTop />
-      <Navbar />
-      <Routes>
-        <Route exact path='/' component={Home} />
-        <Route exact path='/recommend'  component={Recommendpage} />
-        <Route exact path='/services'  component={Services} />
-        <Route exact path='/testimonials'  component={Testimonials} />
-      </Routes>
-      <Hero />
-      <Services />
-      <Recommend />
-      <Testimonials />
-      <Footer />
-      </Router>
-    </div>
-    </>
+  return (
+      <BrowserRouter>
+        {/* <ScrollToTop /> */}
+        {/* <Navbar /> */}
+          <Routes>
+            <Route exact path='/' element={<Home/>} />
+            <Route path='/recommend'  element={<Recommendpage/>} />
+            <Route path='/services'  element={<Services/>} />
+            <Route path='/testimonials'  element={<Testimonials/>} />
+          </Routes>
+        {/* <Hero /> */}
+        {/* <Footer /> */}
+      </BrowserRouter>
   );
-  
-
 }

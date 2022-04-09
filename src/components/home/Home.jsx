@@ -7,16 +7,16 @@ import ScrollToTop from './ScrollToTop'
 import hero from './Hero'
 import Recommend from './Recommend'
 import Hero from './Hero'
+import { Link } from 'react-router-dom'
 export default function Home() {
   return (
     <>
-      <Navbar/>
-      <Hero/>
-      <Recommend />
-      <ScrollToTop />
-      <Testimonials/>
-
-      
+      <div>
+        Home Page
+        <Link to={"/recommend"}>
+          <p>route to recommend</p>
+        </Link>
+      </div>
     </>
   );
 }
