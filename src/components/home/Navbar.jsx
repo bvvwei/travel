@@ -8,7 +8,8 @@ export default function Navbar() {
   const [navbarState, setNavbarState] = useState(false);
   return (
     <>
-      <Nav>
+    <p style={{height: 200, backgroundColor: 'gray'}}>its navbar</p>
+      {/* <Nav>
         <div className="brand">
           <div className="container">
             <img src={logo} alt="" />
@@ -68,7 +69,7 @@ export default function Navbar() {
           </li>
          
         </ul>
-      </ResponsiveNav>
+      </ResponsiveNav> */}
     </>
   );
 }

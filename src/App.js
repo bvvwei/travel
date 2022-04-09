@@ -38,15 +38,14 @@ export default function App() {
   return (
       <BrowserRouter>
         {/* <ScrollToTop /> */}
-        {/* <Navbar /> */}
+        <Navbar />
           <Routes>
             <Route exact path='/' element={<Home/>} />
             <Route path='/recommend'  element={<Recommendpage/>} />
             <Route path='/services'  element={<Services/>} />
             <Route path='/testimonials'  element={<Testimonials/>} />
           </Routes>
-        {/* <Hero /> */}
-        {/* <Footer /> */}
+        <Footer />
       </BrowserRouter>
   );
 }

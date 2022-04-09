@@ -11,7 +11,7 @@ import { Link } from 'react-router-dom'
 export default function Home() {
   return (
     <>
-      <div>
+      <div style={{height: 300}}>
         Home Page
         <Link to={"/recommend"}>
           <p>route to recommend</p>
